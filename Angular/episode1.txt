@@ -10,5 +10,4 @@
   - Explain the difference between Angular and other JavaScript frameworks like React and Vue.
 - **Exercises:**
   - Create your first Angular app using Angular CLI.
-
-  -------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------

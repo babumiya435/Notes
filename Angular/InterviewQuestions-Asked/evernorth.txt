@@ -1,0 +1,8 @@
+various types of component communication
+Dependancy Injection
+What are observables
+State managment using subject
+Ngrx store
+expressjs project Structure
+DB communication in BE server
+how to connect - start real time expressjs server
