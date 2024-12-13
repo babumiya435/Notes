@@ -1,0 +1,12 @@
+#### **Episode 8: State Management with NgRx**
+- **Topics Covered:**
+  - What is NgRx and why use it?
+  - Store, Actions, Reducers, Selectors, and Effects in NgRx
+  - Setting up NgRx in Angular
+  - Handling side effects with NgRx Effects
+- **Key Interview Questions:**
+  - What is NgRx, and how does it help in managing state?
+  - Explain the concepts of Actions, Reducers, and Selectors in NgRx.
+  - How do you handle side effects in NgRx?
+- **Exercises:**
+  - Set up NgRx in an Angular app and create a simple store with actions and reducers.

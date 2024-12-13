@@ -1,0 +1,12 @@
+#### **Episode 4: Routing and Navigation**
+- **Topics Covered:**
+  - What is Angular Router?
+  - Configuring routes in Angular
+  - RouterLink, RouterOutlet, and lazy loading
+  - Route guards (CanActivate, CanLoad)
+- **Key Interview Questions:**
+  - How do you configure routing in Angular?
+  - What is lazy loading and why is it useful?
+  - How do route guards work?
+- **Exercises:**
+  - Create a navigation menu with routes and lazy loading.

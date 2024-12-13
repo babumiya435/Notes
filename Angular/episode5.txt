@@ -1,0 +1,12 @@
+#### **Episode 5: Forms in Angular (Template-driven and Reactive Forms)**
+- **Topics Covered:**
+  - Understanding forms in Angular
+  - Template-driven forms vs reactive forms
+  - Form validation
+  - Handling form submissions
+- **Key Interview Questions:**
+  - What is the difference between template-driven and reactive forms?
+  - How do you implement form validation in Angular?
+  - Explain reactive form handling in Angular.
+- **Exercises:**
+  - Create a form with validation using both template-driven and reactive approaches.

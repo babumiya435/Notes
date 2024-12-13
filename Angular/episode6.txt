@@ -1,0 +1,12 @@
+#### **Episode 6: Directives and Pipes**
+- **Topics Covered:**
+  - Built-in directives (ngIf, ngFor, ngSwitch)
+  - Custom directives and structural directives
+  - Pipes (built-in and custom pipes)
+  - Async pipe
+- **Key Interview Questions:**
+  - What is the difference between structural and attribute directives?
+  - How do you create a custom directive in Angular?
+  - Explain how pipes work in Angular.
+- **Exercises:**
+  - Create a custom directive and pipe.

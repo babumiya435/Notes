@@ -1,0 +1,12 @@
+#### **Episode 15: Deployment and CI/CD for Angular Applications**
+- **Topics Covered:**
+  - Building and optimizing Angular for production
+  - Deployment strategies (Heroku, AWS, Firebase)
+  - Setting up CI/CD pipelines for Angular apps
+  - Automating testing, build, and deployment with Jenkins/GitLab CI
+- **Key Interview Questions:**
+  - How do you deploy Angular applications to production?
+  - What is CI/CD, and how do you implement it for Angular apps?
+  - How do you optimize an Angular app for production?
+- **Exercises:**
+  - Set up a CI/CD pipeline using GitLab CI or GitHub Actions for your Angular app.

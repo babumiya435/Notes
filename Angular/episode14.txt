@@ -1,0 +1,12 @@
+#### **Episode 14: Angular with Backend (Node.js, Express, GraphQL)**
+- **Topics Covered:**
+  - Setting up a backend with Node.js and Express
+  - Consuming REST APIs in Angular
+  - GraphQL integration with Angular
+  - Handling real-time data with WebSockets
+- **Key Interview Questions:**
+  - How do you integrate a backend API with an Angular app?
+  - What is GraphQL and how is it different from REST?
+  - How do you use WebSockets in Angular applications?
+- **Exercises:**
+  - Set up a Node.js backend with REST and GraphQL and integrate it with an Angular frontend.

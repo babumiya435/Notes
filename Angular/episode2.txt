@@ -1,0 +1,12 @@
+#### **Episode 2: Components and Templates**
+- **Topics Covered:**
+  - Understanding components in Angular
+  - Templates, directives, and data binding
+  - Component lifecycle hooks
+  - Component communication (Input/Output decorators)
+- **Key Interview Questions:**
+  - What are Angular components and how do they communicate?
+  - Explain the lifecycle hooks in Angular.
+  - What is data binding in Angular? Explain the types.
+- **Exercises:**
+  - Create a simple component with data binding and lifecycle hooks.

@@ -1,0 +1,12 @@
+#### **Episode 12: Angular Security Best Practices**
+- **Topics Covered:**
+  - Security issues in Angular (XSS, CSRF)
+  - Sanitizing inputs with Angular's DomSanitizer
+  - Angular security best practices (HTTP interceptors, token management)
+  - Protecting routes with Guards
+- **Key Interview Questions:**
+  - What are some common security vulnerabilities in Angular?
+  - How do you prevent XSS and CSRF attacks in Angular?
+  - How do you manage authentication tokens in Angular?
+- **Exercises:**
+  - Implement HTTP interceptors for handling authentication and error responses.

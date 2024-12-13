@@ -1,0 +1,13 @@
+#### **Episode 7: Observables and RxJS in Angular**
+- **Topics Covered:**
+  - What are Observables?
+  - RxJS operators (map, mergeMap, filter, etc.)
+  - Subscribing to Observables
+  - Handling HTTP requests with RxJS
+  - Using RxJS in components, services, and forms
+- **Key Interview Questions:**
+  - What is the difference between Promises and Observables?
+  - How do you use RxJS in Angular applications?
+  - What are some common RxJS operators and their use cases?
+- **Exercises:**
+  - Create an Observable to fetch data from an API and display it in a component.

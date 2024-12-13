@@ -1,0 +1,12 @@
+#### **Episode 10: Angular Testing (Unit and E2E Testing)**
+- **Topics Covered:**
+  - Unit testing in Angular with Jasmine and Karma
+  - Writing tests for components, services, and pipes
+  - End-to-End (E2E) testing with Protractor
+  - Mocking dependencies and writing test cases for Angular apps
+- **Key Interview Questions:**
+  - How do you test components and services in Angular?
+  - What is the difference between unit testing and E2E testing in Angular?
+  - How do you mock services and dependencies in Angular tests?
+- **Exercises:**
+  - Write unit tests for a service and an E2E test for a component.
