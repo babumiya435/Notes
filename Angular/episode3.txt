@@ -1,0 +1,13 @@
+#### **Episode 3: Services and Dependency Injection**
+- **Topics Covered:**
+  - What are services in Angular?
+  - Dependency Injection (DI) in Angular
+  - Creating and using services
+  - Singleton services
+  - Injecting services into components
+- **Key Interview Questions:**
+  - What is dependency injection and why is it important in Angular?
+  - How do services help in application development?
+  - Explain the singleton pattern in the context of Angular services.
+- **Exercises:**
+  - Create a service to fetch data and inject it into a component.

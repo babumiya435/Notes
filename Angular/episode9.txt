@@ -1,0 +1,13 @@
+#### **Episode 9: Angular Performance Optimization**
+- **Topics Covered:**
+  - Change detection strategy (Default vs OnPush)
+  - Lazy loading of modules
+  - Optimizing component re-rendering
+  - Tree-shaking and bundling
+  - Caching and memoization strategies
+- **Key Interview Questions:**
+  - What is the Change Detection mechanism in Angular?
+  - How does lazy loading improve performance in Angular apps?
+  - What are tree-shaking and bundling in Angular?
+- **Exercises:**
+  - Implement OnPush change detection strategy and lazy loading in a project.

@@ -1,0 +1,12 @@
+#### **Episode 13: Progressive Web Apps (PWA) with Angular**
+- **Topics Covered:**
+  - What is a Progressive Web App?
+  - Setting up PWA with Angular
+  - Service Workers and Caching Strategies
+  - Push Notifications and Offline Support
+- **Key Interview Questions:**
+  - How do you convert an Angular app to a PWA?
+  - What are Service Workers and how do they work in PWAs?
+  - What caching strategies can be used in Angular PWAs?
+- **Exercises:**
+  - Convert an Angular app into a PWA and add offline support.

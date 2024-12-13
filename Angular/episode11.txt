@@ -1,0 +1,12 @@
+#### **Episode 11: Angular Architectures and Design Patterns**
+- **Topics Covered:**
+  - Modular architecture in Angular
+  - Feature modules vs core modules
+  - Singleton services and shared services
+  - Design patterns in Angular (Observer, Singleton, Factory)
+- **Key Interview Questions:**
+  - What is a modular architecture in Angular and why is it important?
+  - How do you design reusable components in Angular?
+  - What are some design patterns you have used in Angular applications?
+- **Exercises:**
+  - Refactor an Angular application to follow a modular architecture.
