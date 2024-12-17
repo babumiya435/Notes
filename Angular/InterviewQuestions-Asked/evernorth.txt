@@ -1,3 +1,5 @@
+Full Stack position:
+---------------------
 various types of component communication
 Dependancy Injection
 What are observables

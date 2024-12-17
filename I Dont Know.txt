@@ -1,0 +1,4 @@
+1. how to create angular app from scratch or using CLI
+2. what is observable
+3. what are different rxjs subjects
+4. angular annotations 

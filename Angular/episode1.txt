@@ -1,13 +1,17 @@
 #### **Episode 1: Introduction to Angular**
 - **Topics Covered:**
+
   - What is Angular?
   - Angular CLI setup and usage
   - Structure of an Angular application
   - Understanding TypeScript in Angular
   - First Angular app: Hello World
+
 - **Key Interview Questions:**
+
   - What are the main features of Angular?
   - Explain the difference between Angular and other JavaScript frameworks like React and Vue.
+  
 - **Exercises:**
   - Create your first Angular app using Angular CLI.
 -------------------------------------------------------------------------------------------------
