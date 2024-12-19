@@ -1,4 +1,45 @@
-1. how to create angular app from scratch or using CLI
-2. what is observable
-3. what are different rxjs subjects
-4. angular annotations 
+Creating new angular app using CLI from sKratch - Yes 
+    - ng new my-app, ng g c comp, ng g s service etc.
+
+angular basic project structure - No
+    package.json -> contains project description(name, version,) , 
+                    dependencies(animations, common, compiler, core, forms, router, ssr, expressjs, rxjs, zone.js, tslib, platform-browser, platform-server, platform-browser-dynamic),
+                    dev dependencies(angular devkit, node, express, karma, karma-jasmie, typescript), 
+                    scripts(
+                        "scripts": {
+                                    "ng": "ng",
+                                    "start": "ng serve",
+                                    "build": "ng build",
+                                    "watch": "ng build --watch --configuration development",
+                                    "test": "ng test",
+                                    "serve:ssr:my-app": "node dist/my-app/server/server.mjs"
+                                    },
+                            )
+    
+    package-lock.json -> used for installing exact versions of dependencies on ci/cd or any 
+                        environment building to avoid un neccesary conficts (npm ci(CI/CD) or npm install)
+    
+    angular.json -> If the angular.json file is missing:
+                    CLI Commands Will Fail: (Commands like ng serve, ng build, ng test, and ng generate won't work, as the Angular CLI relies on this file for instructions.)
+                    Project Cannot Be Built or Served:
+                    No Environment Switching: (Environment-specific configurations, such as production or development builds, cannot be managed.)
+                    Dependency Issues: (The application might fail to load required assets, styles, or third-party libraries as their paths are defined in angular.json)
+                    Manual Configuration Overhead:
+
+what is observable - No
+what are different rxjs subjects - No
+angular annotations - No
+state management without ngrx - No
+state management using ngrx - No
+webpack - No
+jit vs aot in angular - No
+ssr - No
+micro front end - No
+micro services - No
+PWA - No
+service workers
+web workers
+
+
+
+angular complex project structure - No
