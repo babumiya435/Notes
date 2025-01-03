@@ -25,20 +25,46 @@ angular basic project structure - No
                     No Environment Switching: (Environment-specific configurations, such as production or development builds, cannot be managed.)
                     Dependency Issues: (The application might fail to load required assets, styles, or third-party libraries as their paths are defined in angular.json)
                     Manual Configuration Overhead:
-
+-------------------------------------
 what is observable - No
 what are different rxjs subjects - No
+--------------------------------------
 angular annotations - No
+--------------------------------------
 state management without ngrx - No
 state management using ngrx - No
+--------------------------------------
 webpack - No
+--------------------------------------
 jit vs aot in angular - No
+--------------------------------------
 ssr - No
+--------------------------------------
 micro front end - No
+--------------------------------------
 micro services - No
+--------------------------------------
 PWA - No
-service workers
-web workers
+--------------------------------------
+service workers - No
+web workers - No
+--------------------------------------
+Dependency Injections - No
+single ton services - No
+--------------------------------------
+zone.js - No
+component life cycle hooks - No
+change detection in angular - No
+--------------------------------------
+Router, Routes, Route guards - No
+Auth guards - No
+Interceptors - No
+--------------------------------------
+ng-template, ng-container - > all template directives - No
+--------------------------------------
+directives, pipes, - No
+--------------------------------------
+
 
 
 
