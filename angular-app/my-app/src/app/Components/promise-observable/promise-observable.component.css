@@ -1,0 +1,15 @@
+
+
+.app-container {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    border: 1px solid black;
+}
+
+.child-container {
+    display: flex;
+    flex: 50%;
+    border: 1px solid blue;
+    padding: 12px;
+}
