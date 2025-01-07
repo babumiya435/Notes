@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { PromiseObservableComponent } from './Components/promise-observable/promise-observable.component';
+import { PromiseObservableComponent } from './Components/promise-observable-practice/promise-observable.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { StoreComponent } from './Components/store/store.component';
 
@@ -13,7 +13,7 @@ export const routes: Routes = [
     // },
     {
         path: 'promise',
-        loadComponent: () => import('./Components/promise-observable/promise-observable.component').then(m => m.PromiseObservableComponent),
+        loadComponent: () => import('./Components/promise-observable-practice/promise-observable.component').then(m => m.PromiseObservableComponent),
         title: 'Promise-Observable Practice'
     },
     // { path : 'store', component : StoreComponent },
