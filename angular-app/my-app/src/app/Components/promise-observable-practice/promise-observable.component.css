@@ -8,7 +8,7 @@
 }
 
 .child-container {
-    display: flex;
+    /* display: flex; */
     flex: 50%;
     border: 1px solid blue;
     padding: 12px;

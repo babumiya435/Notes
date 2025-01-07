@@ -25,7 +25,13 @@ angular basic project structure - No
                     No Environment Switching: (Environment-specific configurations, such as production or development builds, cannot be managed.)
                     Dependency Issues: (The application might fail to load required assets, styles, or third-party libraries as their paths are defined in angular.json)
                     Manual Configuration Overhead:
+--------------------------------------------------------
+Routes creation, Router, ActivatedRoute services - Yes
+Route guards - Yes
+Resolvers - Yes
 -------------------------------------
+what are call backs in js , angular - No
+what are Promises in js, angular - No
 what is observable - No
 what are different rxjs subjects - No
 --------------------------------------
@@ -56,8 +62,6 @@ zone.js - No
 component life cycle hooks - No
 change detection in angular - No
 --------------------------------------
-Router, Routes, Route guards - No
-Auth guards - No
 Interceptors - No
 --------------------------------------
 ng-template, ng-container - > all template directives - No

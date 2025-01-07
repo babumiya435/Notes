@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './routes-practice.component.css'
 })
 export class RoutesPracticeComponent {
-  public routes : string = `
+  public routesBefore : string = `
+  
   Before Angular 14 (before standalone components) 
 
   1.Routes creation: (before standalone components) 
@@ -141,8 +142,9 @@ export class RoutesPracticeComponent {
       this.route.quryParams.subscribe(params => console.log(params['id']));
     }
     *****************************************************
+`;
 
-  
+  public routesAfter : string = `
   After Angular 14 (Standalone components)
 
   1.Routes creation:(After standalone components) 
