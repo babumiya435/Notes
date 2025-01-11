@@ -9,11 +9,13 @@ import { CanActivate } from '@angular/router';
     }
 )
 
-
-
 export class AuthGuard implements CanActivate {
     constructor(private authenticationService: AuthenticationService){}
-    canActivate() {
-        return true;
+    canActivate(): Promise<boolean> {
+        return new Promise((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(true)
+            },1000)
+        })
     }
 }

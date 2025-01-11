@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { PromiseObservableComponent } from './Components/promise-observable-practice/promise-observable.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 import { StoreComponent } from './Components/store/store.component';
+import { authGuard } from './RouteGuards/auth.guard';
 
 export const routes: Routes = [
     { path : '', redirectTo : '/promise', pathMatch : 'full' },
@@ -25,7 +26,8 @@ export const routes: Routes = [
     {
         path : 'routes',
         loadComponent : () => import('./Components/routes-practice/routes-practice.component').then(m => m.RoutesPracticeComponent),
-        title : 'Routes Practice'
+        title : 'Routes Practice',
+        canActivate: [authGuard]
     },
     // { path : '**', component : PageNotFoundComponent },
     {

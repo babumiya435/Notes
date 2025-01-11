@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './page-not-found.component.css'
 })
 export class PageNotFoundComponent {
-
+  example1 = "example1";
+  example2 = "example2";
 }
