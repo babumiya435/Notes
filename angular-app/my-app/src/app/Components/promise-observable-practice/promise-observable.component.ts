@@ -173,6 +173,10 @@ export class PromiseObservableComponent implements OnInit {
 
 
   observableMethod() {
-
+    // observables are the type of data steams (http res, fromEvent, of, interval, customObservables, reactiveForms, routing, stateMangmnt, webSockets, etc.)
+    // cold observables
+      // http response, of , interval, custom
+    // hot observables
+      // subjects, fromEvents, StateMngmt, Websocket, custom
   }
 }
