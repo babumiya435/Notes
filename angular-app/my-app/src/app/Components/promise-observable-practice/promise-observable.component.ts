@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-promise-observable',
@@ -105,7 +106,8 @@ export class PromiseObservableComponent implements OnInit {
   observable = ``;
 
   ngOnInit() {
-    this.promiseMethod();
+    // this.promiseMethod();
+    this.observableMethod();
   }
 
   promiseMethod() {
@@ -176,7 +178,35 @@ export class PromiseObservableComponent implements OnInit {
     // observables are the type of data steams (http res, fromEvent, of, interval, customObservables, reactiveForms, routing, stateMangmnt, webSockets, etc.)
     // cold observables
       // http response, of , interval, custom
+      // observable source code will gets exected from the start for each subscription
+      // each subscriber gets all the data (all streams) whether the subscriber subscription made late or early
+    console.log("**********************************************");
+    const cold$ = new Observable((observer) => {
+      console.log("cold Observable created");
+      observer.next("Value 1"),
+      observer.next("Value 2"),
+      observer.next("Value 3"),
+      observer.next("Value 4")
+      // observer.error(),
+      // observer.complete()
+    });
+
+    console.log("Before Subscription");
+    // subscription1
+    cold$.subscribe(data => console.log("subscription1", data));
+    // cold$.subscribe({
+    //   next: value => console.log(value),
+    //   error: err => console.log(err),
+    //   complete: ()=> console.log("completed")
+    // });
+
+    // subscription2
+    cold$.subscribe(data => console.log("subscription2", data));
+    
+
     // hot observables
       // subjects, fromEvents, StateMngmt, Websocket, custom
+      // hot observable emit the date irrespective of subscription
+      // if an observer subscribe the observable late mean it misses the previously emited stream
   }
 }
