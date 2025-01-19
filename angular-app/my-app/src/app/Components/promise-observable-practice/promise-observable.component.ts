@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-promise-observable',
@@ -107,7 +107,9 @@ export class PromiseObservableComponent implements OnInit {
 
   ngOnInit() {
     // this.promiseMethod();
-    this.observableMethod();
+    // this.observableMethod();
+    this.hotObservable()
+      // this.coldObsInterval()
   }
 
   promiseMethod() {
@@ -208,5 +210,59 @@ export class PromiseObservableComponent implements OnInit {
       // subjects, fromEvents, StateMngmt, Websocket, custom
       // hot observable emit the date irrespective of subscription
       // if an observer subscribe the observable late mean it misses the previously emited stream
+      // console.log("before hot observable");
+      // const subject = new Subject();
+      // subject.next("value before subscription");
+      // subject.subscribe((value) => console.log("hot1", value));
+      // // all the subscribers available above the data emmision will receive the data
+      // subject.next("value after subscription");
+      // subject.subscribe((value) => console.log("hot2", value));
+      // subject.next("value after hot2 subscription");
+      // console.log("after hot2 late subscripton")
+      //************************
+  }
+
+  hotObservable(){
+    // ex using setInterval
+    const sub = new Subject();
+    let counter = 1;
+    const intervalId = setInterval(()=>{
+          console.log("hot - ++++ inside source execution ++++");
+          console.log("hot - intervalId",JSON.stringify(intervalId))
+          sub.next(counter++);
+          if(counter > 5){
+            clearInterval(intervalId);
+            sub.complete();
+          }
+    },1000);
+
+    console.log("hot - **********Before Subscription*********");
+    sub.subscribe(v => console.log("hot - hot sub 1", v));
+    setTimeout(()=>{
+      sub.subscribe(v=> console.log("hot - hot sub 2", v));
+    },3000);
+    console.log("hot - **********After Subscription**********");
+  }
+
+  coldObsInterval(){
+    const cold = new Observable((observar)=>{
+      console.log("cold - #### inside cold source execution ####");
+      let counter = 1;
+      const intervalId = setInterval(()=>{
+          console.log("cold -intervalId", intervalId);
+          observar.next(counter++);
+          if(counter > 5){
+            clearInterval(intervalId);
+            observar.complete();
+          }
+      },1000)
+    });
+
+    console.log("cold - #### Befor cold subscription ####");
+    cold.subscribe(v => console.log("cold - cold sub1 value", v));
+    setTimeout(()=>{
+      cold.subscribe(v => console.log("cold - cold sub2 value", v));
+    },3000)
+    console.log("cold - #### After cold subscription");
   }
 }
