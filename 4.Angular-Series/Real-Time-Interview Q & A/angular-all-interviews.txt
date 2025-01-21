@@ -1,4 +1,8 @@
 https://www.simplilearn.com/tutorials/angular-tutorial/angular-interview-questions
+
 https://www.interviewbit.com/angular-interview-questions/
+
 https://blog.brecht.io/angular-interview-questions-for-seniors/
+
 https://www.testgorilla.com/blog/angular-interview-questions/
+
