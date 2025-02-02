@@ -1,0 +1,20 @@
+Component vs Directive
+LazyLoading vs EagarLoading
+routerLink vs href
+ActivatedRoute vs Router
+Angular HttpClinet vs Http Services
+-------------------------------------------
+What are state management options in angular
+ - Component state
+ - Rxjs
+ - Services
+ - NGRX
+How to pass data from one component to other component
+ - Parent to child using @Input decorators
+ - Child to parent @Output decorator and EventEmiter
+ - Child to parent using @ViewChid decorator
+ - Un reated component using service & NGRX
+What is differable View
+ - It is a new feature got introduced in angular 17, 
+ which is a powerful tool that can be used to reduce the 
+ initial bunde size of the application.

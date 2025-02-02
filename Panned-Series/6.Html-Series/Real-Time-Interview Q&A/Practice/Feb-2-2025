@@ -1,0 +1,232 @@
+-----------------------------------------------------------------------
+31. What are some advantages of HTML5 over its previous versions?
+ - semantic elements like : header, footer, nav, section, ......
+ - DOM API's : geoLocation , ....
+ - media type tags : audio, video, .....
+ - vector graphics : svg, .....
+ - image processing : <img>, .....
+ ++++++++++++++++++++++++++++++++++++
+ 1.Semantic elements : (header, footer, nav, section, aside, article, audio, video)
+ 2.Cross Browser Compatibility: <meta name="viewport", content="width=device-width, initial-scale=1.0">
+ 3.WebStorage up to 5MB: 5-10 MB, local & session storage, broadcastChannel API,
+ 4.Multimedia tags and its controls: 
+<audio controls>
+    <source src="test.mp3" type="audio/mpeg">
+    Your browser does not support audio tag
+</audio>
+<video controls>
+    <source src="video.mp4" type="video/mp4/">
+    Your browser does not support video tag
+</video>
+
+-------------------------------------------------------------------------------------------
+30. Explain Web Components and their usage.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Components Example</title>
+</head>
+<body>
+    <!-- Using the Web Component -->
+    <user-profile name="John Doe" email="john@example.com" avatar="https://via.placeholder.com/100"></user-profile>
+
+    <script>
+        class UserProfile extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: "open" });
+            }
+
+            connectedCallback() {
+                const name = this.getAttribute("name") || "Unknown";
+                const email = this.getAttribute("email") || "No Email";
+                const avatar = this.getAttribute("avatar") || "https://via.placeholder.com/100";
+
+                this.shadowRoot.innerHTML = `
+                    <style>
+                        .profile-card {
+                            font-family: Arial, sans-serif;
+                            width: 250px;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            padding: 10px;
+                            text-align: center;
+                            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+                        }
+                        img {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                        }
+                    </style>
+                    <div class="profile-card">
+                        <img src="${avatar}" alt="User Avatar">
+                        <div class="name">${name}</div>
+                        <div class="email">${email}</div>
+                    </div>
+                `;
+            }
+        }
+
+        customElements.define("user-profile", UserProfile);
+    </script>
+</body>
+</html>
+
+
+import { Component, Input } from '@angular/core';
+
+@Component({
+  selector: 'user-profile',
+  standalone: true, // Standalone Component (No need for NgModule)
+  template: `
+    <div class="profile-card">
+      <img [src]="avatar" alt="User Avatar">
+      <div class="name">{{ name }}</div>
+      <div class="email">{{ email }}</div>
+    </div>
+  `,
+  styles: [`
+    .profile-card {
+      font-family: Arial, sans-serif;
+      width: 250px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+  `]
+})
+export class UserProfileComponent {
+  @Input() name: string = 'Unknown';
+  @Input() email: string = 'No Email';
+  @Input() avatar: string = 'https://via.placeholder.com/100';
+}
+
+### **How Are Web Components and Angular Standalone Components Instantiated?**  
+
+Both **Web Components** and **Angular Standalone Components** are instantiated differently. Let’s break it down.  
+
+---
+
+## **1️⃣ Web Components Instantiation in HTML**  
+Web Components are registered using the **Custom Elements API**, which allows browsers to recognize and instantiate them.
+
+### **How Web Components Are Called in HTML?**  
+```html
+<user-profile name="John Doe" email="john@example.com" avatar="https://via.placeholder.com/100"></user-profile>
+```
+✅ **The browser automatically instantiates the component when it encounters `<user-profile>` in the DOM.**  
+
+### **Who Instantiates Web Components?**
+- The **browser** instantiates the component **automatically** when the HTML parser finds the tag.  
+- The **customElements.define()** function registers the component so the browser recognizes it.
+
+### **When Are Web Components Instantiated?**
+- **When the browser renders the page** and finds a matching `<user-profile>` tag.  
+- **When dynamically added using JavaScript**:
+```javascript
+const userCard = document.createElement('user-profile');
+userCard.setAttribute('name', 'Alice');
+userCard.setAttribute('email', 'alice@example.com');
+document.body.appendChild(userCard); // This manually inserts and instantiates the component
+```
+
+---
+
+## **2️⃣ Angular Standalone Components Instantiation in HTML**  
+Angular Standalone Components must be bootstrapped inside an Angular application.
+
+### **How Angular Standalone Components Are Called in HTML?**
+```html
+<user-profile [name]="'John Doe'" [email]="'john@example.com'" [avatar]="'https://via.placeholder.com/100'"></user-profile>
+```
+✅ **Angular will instantiate the component only if it is declared inside an Angular module or standalone bootstrapped.**  
+
+### **Who Instantiates Angular Standalone Components?**
+- **Angular itself** through **its component tree and dependency injection system**.
+- Angular **compiles the component template and creates an instance in memory**.
+
+### **When Are Angular Standalone Components Instantiated?**
+- **When Angular renders the component tree** (i.e., when `<user-profile>` appears inside an Angular template).  
+- **When dynamically added using Angular’s component factory**:
+```typescript
+import { Component, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
+import { UserProfileComponent } from './user-profile.component';
+
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  template: `<button (click)="addUserProfile()">Add User Profile</button> <ng-container #container></ng-container>`
+})
+export class AppComponent {
+  @ViewChild('container', { read: ViewContainerRef }) container!: ViewContainerRef;
+  private componentRef!: ComponentRef<UserProfileComponent>;
+
+  addUserProfile() {
+    this.componentRef = this.container.createComponent(UserProfileComponent);
+    this.componentRef.instance.name = 'Alice';
+    this.componentRef.instance.email = 'alice@example.com';
+  }
+}
+```
+
+---
+
+## **3️⃣ Key Differences in Instantiation**
+| Feature | Web Components | Angular Standalone Components |
+|---------|---------------|--------------------------------|
+| **Who Instantiates?** | The **browser** when encountering the custom tag | **Angular framework** via component tree |
+| **When Instantiated?** | **Immediately when the browser parses HTML** | **When Angular processes the template** |
+| **Dynamic Instantiation?** | Yes, via `document.createElement('user-profile')` | Yes, via `ViewContainerRef.createComponent()` |
+| **Rendering Mechanism?** | Uses native DOM API | Uses Angular's **Change Detection Mechanism** |
+
+---
+
+### **Final Thoughts**
+- **Web Components** are instantiated **natively by the browser** and can be used in any framework.  
+- **Angular Standalone Components** are instantiated **only by Angular**, inside its ecosystem.  
+
+Want a hybrid example where **Angular uses Web Components**? 🚀
+------------------------------------------------------------------------------
+
+29. What is the Geolocation API in HTML5?
+<button onclick="trackLocation()">Start Tracking</button>
+<button onclick="stopTracking()">Stop Tracking</button>
+<p id="tracking-output"></p>
+
+<script>
+    let watchID;
+
+    function trackLocation() {
+        if (navigator.geolocation) {
+            watchID = navigator.geolocation.watchPosition(updatePosition, showError);
+        } else {
+            alert("Geolocation is not supported.");
+        }
+    }
+
+    function updatePosition(position) {
+        document.getElementById("tracking-output").innerHTML =
+            `Latitude: ${position.coords.latitude} <br> Longitude: ${position.coords.longitude}`;
+    }
+
+    function stopTracking() {
+        navigator.geolocation.clearWatch(watchID);
+        alert("Tracking stopped.");
+    }
+</script>
+----------------------------------------------------------------------------
+
+28. What is a manifest file in HTML5?
+
+
+
+ 
