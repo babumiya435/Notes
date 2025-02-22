@@ -1,0 +1,5 @@
+- GraphQL --> Graph Query Language - created to optimize existing REST API
+- unlike Rest API's GraphQL have single end point.
+- Deveoped by FaceBook
+- data schema & retrieves precise data what client requires
+- 

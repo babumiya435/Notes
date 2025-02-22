@@ -1,0 +1,21 @@
+/* .header-section {
+     navigation{
+        display: flex;
+        gap: 12px;
+        list-style-type: none;
+
+        a{
+            text-decoration: none;
+        }
+    }
+} */
+
+.header-section navigation {
+    display: flex;
+    gap: 12px;
+    list-style-type: none;
+}
+
+.header-section navigation a {
+    text-decoration: none;
+}
