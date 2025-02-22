@@ -1,11 +1,43 @@
 <!-- <h1>
   HOME Page
 </h1> -->
-<div>
-  <a routerLink="/">Promise Vs Observable Practice</a> <br>
-  <a routerLink="/routes">Routes Practice</a> <br>
-  <a routerLink="/store">Store Page Practice</a> <br>
-  <a routerLink="**">Page Not Found Route</a>
-</div>
-<router-outlet />
+<header class="header-section">
+  <nav>
+    <ul>
+      <li>
+        <a routerLink="/">Promise Vs Observable Practice</a>
+      </li>
+      <li>
+        <a routerLink="/routes">Routes Practice</a>
+      </li>
+      <li>
+        <a routerLink="/store">Store Page Practice</a>
+      </li>
+      <li>
+        <a routerLink="/graphql">Graph QL Practice</a>
+      </li>
+      <li>
+        <a routerLink="/restapi">Rest Api Practice</a>
+      </li>
+      <li>
+        <a routerLink="**">Page Not Found Route</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <router-outlet />
+</main>
+<footer>
+  <div>Copy Right Section</div>
+</footer>
+<!-- <div>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  
+</div> -->
+<!-- <router-outlet /> -->
 <!-- <router-outlet></router-outlet> -->

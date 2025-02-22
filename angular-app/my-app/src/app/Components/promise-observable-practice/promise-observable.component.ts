@@ -108,7 +108,7 @@ export class PromiseObservableComponent implements OnInit {
   ngOnInit() {
     // this.promiseMethod();
     // this.observableMethod();
-    this.hotObservable()
+    // this.hotObservable()
       // this.coldObsInterval()
   }
 
