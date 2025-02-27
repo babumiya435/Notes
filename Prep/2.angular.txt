@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "day": "Thursday",
+            "date": "27-02-202",
+            "prep": [
+                {
+                    "angular": {
+                        "questions": [
+                            {
+                                "Q1": "what is angular",
+                                "relatedConcept": "angular",
+                                "A1": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

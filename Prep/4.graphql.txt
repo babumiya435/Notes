@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "day": "Thursday",
+            "date": "27-02-202",
+            "prep": [
+                {
+                    "graphql": {
+                        "questions": [
+                            {
+                                "Q1": "what is angular",
+                                "relatedConcept": "graphql",
+                                "A1": ""
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

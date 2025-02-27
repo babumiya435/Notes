@@ -1,0 +1,21 @@
+{
+    "data": [
+        {
+            "day": "Thursday",
+            "date": "27-02-202",
+            "prep": [
+                {
+                    "DSA": {
+                        "questions": [
+                            {
+                                "Q1": "what is dsa",
+                                "relatedConcept": "DSA",
+                                "A1": "Data structures and algorithms used to store the data and algorithms to retrieve data efficiantly"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
